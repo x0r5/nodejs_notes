@@ -15,6 +15,15 @@ app.use('/services', servicesRouter);
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
 
+app.get("/api/howto", (req, res)=>{
+    const replyObject = {
+        title: "api description",
+        mainPage: "/api/howto"
+    }
+
+    res.send(JSON.stringify(replyObject));
+})
+
 app.listen(port, () => {
     console.log("server started");
 })
