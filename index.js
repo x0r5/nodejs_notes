@@ -8,9 +8,9 @@ const port = 3000;
 // });
 
 var homeRouter = require('./routes/home');
-var servicesRouter = require('./routes/services');
+var notesRouter = require('./routes/notes');
 app.use('/', homeRouter);
-app.use('/services', servicesRouter);
+app.use('/notes', notesRouter);
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
