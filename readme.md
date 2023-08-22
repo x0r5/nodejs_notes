@@ -16,6 +16,15 @@
    - `sudo systemctl enable mongod` => will start on reboot
 
 ## Management
+### Node App
+- `npm start` to start the server 
 ### MongoDB
 - Start a `mongosh` session on the same host machine as the mongod. You can run `mongosh` without any command-line options to connect to a mongod that is running on your localhost with default port 27017.
 - The MongoDB Shell, mongosh, is a fully functional JavaScript and Node.js 16.x REPL environment for interacting with MongoDB deployments. You can use the MongoDB Shell to test queries and operations directly with your database.
+- Mongosh commands:
+    - `db`: prints actual db
+    - `use <dbname>`: creates or switches to existing db
+    - `show dbs`: list all databases
+    - `db.myCollectionName.insertOne({x: 1});`: insert one record + create collection if doesn't exist
+    - `db.myCollectionName.find()`: list all elements in a collection
+    - `db.mycollectionName.find({"x": "1"})`: specific lookup
