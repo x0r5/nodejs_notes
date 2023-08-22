@@ -4,7 +4,7 @@ const server = '127.0.0.1:27017';
 const database = 'notes_app';
 
 mongoose
-    .connect('mongodb://127.0.0.1/${database}')
+    .connect(`mongodb://${server}/${database}`)
     .then(()=> {
         console.log("MongoDB connected.");
     })
