@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const server = '127.0.0.1:27017';
+//const server = '127.0.0.1:27017';
+const server = 'mongo:27017'
 const database = 'notes_app';
 
 mongoose
