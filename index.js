@@ -36,6 +36,8 @@ app.get("/api/howto", (req, res)=>{
 app.post('/api/notes',(req, res) => {
     console.log('post called on notes');
     console.log(req.body);
+    res.statusCode = 200;
+    res.send('OK');
 })
 
 app.listen(port, () => {
