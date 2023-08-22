@@ -38,3 +38,4 @@
 - `docker logs <container_id`: get logs
 - `docker exec -it <container_id> /bin/bash`: enter the container
 - `docker kill <container_id>`: stop the container from running
+- `docker-compose up`: start both containers defined in dokcer-compose.yml
