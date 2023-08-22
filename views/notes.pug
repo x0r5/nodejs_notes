@@ -4,6 +4,13 @@ block content
     h1= title 
 
     h2 Create a new note
+    form(action="/api/notes", method='POST', id="createNoteInputForm")
+        div.mb-3
+            label(for='inputTitle', class=form-label) Title 
+            input(type="text", class='form-control', id='inputTitle', aria-describedby='inputTitleHelp')
+            div(id='inputEmailHelp', class='form-text') Please add a title for your note
+        input(type="text", class='form-control', id='inputRandom', name='inputRandom')
+        input(type='submit', class='btn btn-primary', value="Save")
 
     h2 Your notes
     ul 

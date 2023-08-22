@@ -7,6 +7,15 @@ const port = 3000;
 //     res.send("Hello World!");
 // });
 
+//frontend libraries
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+app.use('/js', express.static(path.join(__dirname, 'static')));
+
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 var homeRouter = require('./routes/home');
 var notesRouter = require('./routes/notes');
 app.use('/', homeRouter);
@@ -22,6 +31,11 @@ app.get("/api/howto", (req, res)=>{
     }
 
     res.send(JSON.stringify(replyObject));
+})
+
+app.post('/api/notes',(req, res) => {
+    console.log('post called on notes');
+    console.log(req.body);
 })
 
 app.listen(port, () => {
