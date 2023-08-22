@@ -28,3 +28,13 @@
     - `db.myCollectionName.insertOne({x: 1});`: insert one record + create collection if doesn't exist
     - `db.myCollectionName.find()`: list all elements in a collection
     - `db.mycollectionName.find({"x": "1"})`: specific lookup
+
+### Docker
+- Run app within a docker container for easier use and portability
+- `docker build . -t <your username>/notes_app`: to build the image
+- `docker images`: to list available images
+- `docker run -p <public_port>:<private_port> -d <your username>/notes_app`: to run the image and redirect public to private ports
+- `docker ps`: get container ID
+- `docker logs <container_id`: get logs
+- `docker exec -it <container_id> /bin/bash`: enter the container
+- `docker kill <container_id>`: stop the container from running
